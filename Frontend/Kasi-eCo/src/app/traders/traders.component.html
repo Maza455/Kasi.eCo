@@ -1,0 +1,72 @@
+<div class="container">
+  <div class="list-div">
+    <h2 class="text-center">Our Traders</h2>
+    
+    <!-- Search input and button -->
+    <div class="search-container">
+      <input type="text" [(ngModel)]="searchTerm" placeholder="Search for traders">
+      <button class="btn btn-primary" (click)="search()">Search</button>
+    </div>
+    
+    <ul class="traders">
+      <li *ngFor="let trader of filteredTraders">
+        <div class="trader-card">
+          <img class="trader-image" [src]="trader.image" alt="Trader Image">
+          <div class="trader-details">
+            <div class="trader-business">{{ trader.businessName }}</div>
+            <div class="trader-name">{{ trader.trader_name }}</div>
+          </div>
+          <a class="trader-link" [routerLink]="'/trader-detail/' + trader.id">
+            View Details
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  
+     
+    
+    
+<!--     
+    <div class="adding-details">
+    
+      <div class="div1">
+        <label for="new-hero">Hero name: </label>
+        <input id="new-hero" #heroName />
+      
+        <label for="real_name">Hero real name: </label>
+        <input id="real_name" #realName />
+      
+        <label for="age">Hero age: </label>
+        <input id="age" #age />
+      
+        <label for="super_powers">Superpowers: </label>
+        <input id="super_powers" #superPowers />
+      </div>
+      
+     <div class="div2">
+      <label for="power_origins">Power Origins: </label>
+      <input id="power_origins" #powerOrigins />
+    
+      <label for="weakness">Hero weakness: </label>
+      <input id="weakness" #weakness />
+     -->
+      <!-- <label for="new-hero">Hero Nationality: </label>
+      <input id="nationality" #nationality /> -->
+<!--     
+      <div> (click) passes input value to add() and then clears the input -->
+        <!-- <button type="button" class="add-button" (click)="add(heroName.value, realName.value, age.value, superPowers.value, powerOrigins.value, weakness.value, nationality.value ); heroName.value=''">
+          Add hero
+        </button>
+    </div> -->
+    <!-- </div>
+    </div>
+    </div> -->
+    
+     
+    
+    
+    
+    

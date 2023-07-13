@@ -1,0 +1,163 @@
+<!-- <h1 class="main-title text-center">{{title}}</h1> -->
+<br>
+
+
+<!-- <header>
+  <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img class="logo" src="../assets/Kasieco-Light-Logo.png" alt="">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <li>
+            <a routerLink="/home" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+              Home
+            </a>
+          </li> 
+          <li>
+            <a routerLink="/products" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+              Our Products
+            </a>
+          </li>
+          <li>
+            <a routerLink="/traders"class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+              Traders
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24" routerLink="/"><use xlink:href="#grid"/></svg>
+              Enquiries
+             </a> 
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white"  routerLink="/">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+              Inventory
+             </a> 
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white" routerLink="/profile">
+              <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+              MyAccount
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ <div class="px-3 py-2 border-bottom mb-3">
+    <div class="container d-flex flex-wrap justify-content-center">
+       <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+      </form> -->
+
+      <!-- <div class="text-end">
+        <button type="button" class="btn btn-light text-dark me-2"  routerLink="/sign-up" >Sign up</button>
+        <button type="button" class="btn btn-primary"  routerLink="/sign-in" >Login</button>
+      </div>
+    </div>
+  </div> 
+</header>
+
+<ul>
+  <li *ngFor="let trader of traders" (click)="navigateToTraderDetails(trader.id)">
+    {{ trader.fname }} - {{ trader.businessName }} - {{ trader.email }} - {{ trader.cell }}
+  </li>
+</ul> -->
+
+<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+
+<header>
+  <div class="px-3 py-2 text-bg-dark border-bottom">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a routerLink="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+          <img class="logo" src="../assets/Kasieco-Light-Logo.png" alt="">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a routerLink="/home" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/products" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+                Our Products
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/traders" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+                Traders
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/enquiries" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24" routerLink="/"><use xlink:href="#grid"/></svg>
+                Enquiries
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/inventory" class="nav-link text-white" routerLink="/">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+                Inventory
+              </a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/profile" class="nav-link text-white">
+                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                My Account
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="text-end">
+          <button type="button" class="btn btn-light text-dark me-2" routerLink="/register">Sign up</button>
+          <button type="button" class="btn btn-primary" routerLink="/login">Login</button>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+ <router-outlet></router-outlet>
+
+<!-- <div class="px-3 py-2 border-bottom mb-3">
+  <div class="container d-flex flex-wrap justify-content-center">
+     <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" role="search">
+      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+    </form> -->
+
+<!-- <ul>
+  <li *ngFor="let trader of traders" (click)="navigateToTraderDetails(trader.id)">
+    {{ trader.fname }} - {{ trader.businessName }} - {{ trader.email }} - {{ trader.cell }}
+  </li>
+</ul> -->
+
+
+
+
+<!-- <nav class="text-center">
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">Heroes</a>
+</nav> -->
+<!-- <router-outlet></router-outlet><br> -->
+<!-- <app-messages class="text-success"></app-messages> -->

@@ -1,0 +1,13 @@
+<h2>Trader Details</h2>
+
+<div *ngIf="trader">
+    <p><strong>FullName:</strong> {{ trader.fname }} </p>
+    <p><strong>Contact no.</strong> {{ trader.cell }} </p>
+    <p><strong>Business</strong> {{ trader.business }} </p>
+    <p><strong>Address</strong> {{ trader.address }} </p>
+    <p><strong>Email</strong> {{ trader.email}} </p>
+</div>
+
+<div *ngIf="!trader">
+    <p>Loading trader details...</p>
+</div>

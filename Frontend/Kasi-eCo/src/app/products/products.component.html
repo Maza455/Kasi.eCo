@@ -1,0 +1,52 @@
+<!-- <div class="container">
+    <h2 class="text-success text-center">All Products</h2>
+    <div class="section">
+        <div class="card-wrap" *ngFor="let product of products">
+            <a routerLink="/product-detail/{{product.id}}" class="card" style="width: 18rem;">
+                <img src="{{product.image}}" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">{{product.p_name}}</h5>
+                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                  <!-- <a href="#" class="btn btn-primary"></a> -->
+                <!-- </div>
+              </a>
+        </div>
+    </div>
+</div> -->
+
+
+
+<!-- <ul>
+  <li *ngFor="let product of products">
+    {{ product.p_name }} - {{ product.price }} - {{product.image}}
+  </li>
+</ul> -->
+
+
+<div class="container">
+  
+  <h2 class="text-success text-center">All Products</h2>
+  
+  <div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search for products">
+   <button class="btn btn-primary" (click)="search()">Search</button> 
+  </div>
+  
+  <div class="section">
+    <div class="card-wrap">
+      <div class="card" *ngFor="let product of products">
+        <a [routerLink]="'/product-detail/' + product.id">
+          <img [src]="product.image" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.p_name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <div class="card-price">R{{ product.price }}</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

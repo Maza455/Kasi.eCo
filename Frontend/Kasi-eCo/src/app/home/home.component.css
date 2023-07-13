@@ -1,0 +1,63 @@
+.container-fluid {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing {
+    width: 200px;
+    margin-bottom: 2rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+  }
+  
+  .btn-primary {
+    background-color: #6116d8;
+    border-color: #4017d6;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2e4bca;
+    border-color: #324de6;
+  }
+  
+  .btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+  }
+  
+  .btn-outline-secondary:hover {
+    color: #333;
+    border-color: #333;
+  }
+  
+  @media (min-width: 576px) {
+    .container-fluid {
+      padding: 3rem;
+    }
+  
+    .display-4 {
+      font-size: 3rem;
+    }
+  
+    .lead {
+      font-size: 1.5rem;
+    }
+  
+    .btn-primary,
+    .btn-outline-secondary {
+      font-size: 1.25rem;
+      padding: 0.75rem 2.5rem;
+    }
+  }
+  

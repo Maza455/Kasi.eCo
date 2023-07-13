@@ -1,0 +1,49 @@
+<!-- <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
+    <div class="bg-dark p-4">
+      
+      <h5 class="text-body-emphasis h4">Profile</h5>
+      <span class="text-body-secondary">Back</span>
+    </div>
+
+
+
+<h1>Profile</h1>
+<img src="/assets/dp2.jpg" height="300px"  width="300px"  class="pimg">
+<section id="welcome">
+
+    <h2>Welder <img src="/assets/iconmonstr-construction-3.svg" height="30px" width="30px" class="cimg"></h2>
+    <div>
+    <a href="https://web.whatsapp.com/" target="_blank"><button class="button button1"><i class="fa fa-github"></i> WhatsApp</button></a>
+    </div>
+    <div>
+
+        <h4>Welcome to my portfolio. This is where I showcase my welding work.</h4>
+    </div> -->
+          
+    <div class="container" *ngIf="currentUser; else loggedOut">
+        <h1 style="text-align: center;">Profile</h1>
+        <div class="imgwrapper d-flex justify-content-center">
+            <img src="{{currentUser.image}}" alt="profile" class="profile">
+        </div>
+        
+        <header class="jumbotron">
+          <h3 style="text-align:center">
+            <strong >Hello {{ currentUser.fname }}</strong>
+          </h3>
+        </header>
+        <br>
+      
+        <p>
+          <strong>Email:</strong>
+          {{ currentUser.email }}
+        </p>
+
+        <button (click)="logout()">Logout</button>
+        
+        
+      </div><ng-template #loggedOut>
+        
+        Please login or register.</ng-template>
+
+        <a routerLink="/register">Register</a>
+<a routerLink="/login">Login</a>
