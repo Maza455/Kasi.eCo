@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const API_URL = 'mongodb://localhost:27017';
+const API_URL = 'https://kasi-e-co.vercel.app/';
 
 @Injectable({
   providedIn: 'root'

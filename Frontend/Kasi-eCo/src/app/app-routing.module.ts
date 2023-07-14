@@ -9,6 +9,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ProductInventoryComponent } from './product-inventory/product-inventory.component';
 
 
 const routes: Routes = [
@@ -20,7 +21,9 @@ const routes: Routes = [
   { path: 'traders', component: TradersComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'profile', component: ProfileComponent }
+  { path: 'profile', component: ProfileComponent },
+  { path: 'product-inventory', component: ProductInventoryComponent }
+
 
 
 

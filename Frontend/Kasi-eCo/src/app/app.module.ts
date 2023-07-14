@@ -16,6 +16,13 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProductInventoryComponent } from './product-inventory/product-inventory.component';
 import { ProfileComponent } from './profile/profile.component';
+import { Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'products', component: ProductsComponent },
+];
 
 @NgModule({
   declarations: [

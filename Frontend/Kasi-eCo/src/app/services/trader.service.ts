@@ -20,7 +20,7 @@ export class TraderService {
   addProduct(formData: FormData) {
     throw new Error('Method not implemented.');
   }
-  private tradersUrl = 'http://localhost:5555/v1/traders/';  // URL to web api
+  private tradersUrl = 'https://kasi-e-co.vercel.app/v1/traders/';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

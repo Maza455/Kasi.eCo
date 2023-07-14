@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const AUTH_API = 'http://localhost:5555/v1/traders/';
+const AUTH_API = 'https://kasi-e-co.vercel.app/v1/traders/';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

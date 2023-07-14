@@ -1,15 +1,105 @@
-<!-- <div class="container">
-    <h2 class="text-success text-center">All Enquiries</h2>
-    <div class="section">
-        <div class="card-wrap" *ngFor="let enquiry of enquiries">
-            <a routerLink="/product-detail/{{product.id}}" class="card" style="width: 18rem;">
-                <img src="{{enquiries.product_name}}" class="card-img-top" alt="">
-                <div class="card-body">
-                  <h5 class="card-title">{{enquiries.product_name}}</h5>
-                  <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
-                  <!-- <a href="#" class="btn btn-primary"></a> -->
-                <!-- </div>
-              </a>
-        </div>
+<h2 class="text-success text-center"></h2>
+
+<div class="container">
+  <h2 class="text-success text-center">All Products</h2>
+  <div class="section">
+    <hr>
+    <div class="btns1">
+    <button type="button" class="btn btn-danger btn-sm">Clear all </button>
+    <button  type="button" class="btn text-center btn-success btn-sm">Add </button>
     </div>
-</div>  -->
+    
+<hr>
+
+
+<div class="adding-details">
+
+  <div class="div1">
+    <hr>
+    <label for="new-product">Product/Service name: </label><br>
+    <input id="new-product" #p_name />
+  <hr>
+    <label for="description">Description: </label><br>
+    <input id="description" #description />
+  <hr>
+    <label for="category">Category: </label><br>
+    <input id="category" #category />
+  <hr>
+    <label for="price">Price: </label><br>
+    <input id="price" #price />
+  <hr>
+
+      <div class="form-group"> 
+    <label for="image">Image</label><br>
+                <input
+                  id="image"
+                  type="file"
+                  class="form-control"
+                  name="image"
+                  accept="image/*"
+                  (change)="handleImageInput($event)"
+                  #image
+                />
+              </div> 
+    </div> 
+  
+  
+  <div class="text-center"> 
+    <button type="button" class="add-button" (click)="add(p_name.value, description.value, category.value, price.value, image.value ); p_name.value='';category.value='';description.value='';price.value='';image.value=''">
+      Add product
+    </button>
+  </div> 
+<hr>
+    <div class="card-wrap">
+      <div class="card" *ngFor="let product of products">
+        <a [routerLink]="'/product-detail/' + product.id">
+          <img [src]="product.image" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.p_name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <div class="card-price">R{{ product.price }}</div>
+            
+          </div>
+          <div class="crud">
+            <button type="button" class="btn btn-primary btn-sm">Edit</button>
+            <button type="button"  class="btn px-2 btn-warning btn-sm">Remove</button>
+            
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- 
+ <ul>
+  <li *ngFor="let product of products">
+    {{ product.p_name }} - {{ product.price }} - {{product.image}}
+  </li>
+</ul> 
+
+
+<div *ngIf ="products" class="container">
+  <h2 class="text-success text-center"> Products</h2>
+  <div class="section">
+    <div class="card-wrap">
+      <div class="card" *ngFor="let product of products">
+        <a [routerLink]="'/product-detail/' + product.id">
+          <img [src]="product.image" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.p_name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <div class="card-price">R{{ product.price }}</div>
+            <div>  <button type="button" class="delete" title="delete product"
+              (click)="delete(product)">x</button></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<h2>Product Details</h2>

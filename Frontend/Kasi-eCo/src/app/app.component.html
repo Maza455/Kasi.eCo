@@ -71,74 +71,83 @@
   </li>
 </ul> -->
 
-<link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-<link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <header>
+    <div class="px-3 py-2 text-bg-dark border-bottom">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <a routerLink="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <img class="logo" src="../assets/Kasieco-Light-Logo.png" alt="">
+          </a>
 
-<header>
-  <div class="px-3 py-2 text-bg-dark border-bottom">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <a routerLink="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-          <img class="logo" src="../assets/Kasieco-Light-Logo.png" alt="">
-        </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a routerLink="/home" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/products" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
-                Our Products
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/traders" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
-                Traders
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/enquiries" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24" routerLink="/"><use xlink:href="#grid"/></svg>
-                Enquiries
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/inventory" class="nav-link text-white" routerLink="/">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
-                Inventory
-              </a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="/profile" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
-                My Account
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="text-end">
-          <button type="button" class="btn btn-light text-dark me-2" routerLink="/register">Sign up</button>
-          <button type="button" class="btn btn-primary" routerLink="/login">Login</button>
-        </div>
-      </nav>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a routerLink="/home" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#home"/></svg>
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/products" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"/></svg>
+                  Our Products
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/traders" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"/></svg>
+                  Traders
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/enquiries" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24" routerLink="/"><use xlink:href="#grid"/></svg>
+                  Enquiries
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/product-inventory" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"/></svg>
+                  Inventory
+                </a>
+              </li>
+              <li class="nav-item">
+                <a routerLink="/profile" class="nav-link text-white">
+                  <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"/></svg>
+                  My Account
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="text-end">
+            <button type="button" class="btn btn-light text-dark me-2" routerLink="/register">Sign up</button>
+            <button type="button" class="btn btn-primary" routerLink="/login">Login</button>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
+  <main role="main">
+    <router-outlet></router-outlet>
+  </main>
 
- <router-outlet></router-outlet>
+</body>
+</html>
+
 
 <!-- <div class="px-3 py-2 border-bottom mb-3">
   <div class="container d-flex flex-wrap justify-content-center">
